@@ -1,3 +1,4 @@
+
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar-menu');
 const navLogo = document.querySelector('#navbar-logo');
@@ -79,4 +80,10 @@ $form = document.querySelector('#form')
             this.reset()
             alert('Gracias por contactarnos. Te responderemos a la brevedad.')
         }
-    } 
+   
+
+
+
+}
+
+// SLIDER
