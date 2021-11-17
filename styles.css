@@ -222,6 +222,14 @@ h1 {
 
 @media screen and (max-width: 568px) {
 
+    .testimonials-wrap,.sector-wrapper {
+    	margin: 0 20% !important;
+    }
+
+    .services-img {
+        width: 100%;
+    }
+
     .hero{
        height: 30vh;
 
@@ -370,7 +378,11 @@ h1 {
 @media screen and (max-width: 568px){
 
 .timeline-wrapper{
-    display: none;
+    display: block;
+}
+
+.box-bottom {
+    width: 100%;
 }
 
 }
