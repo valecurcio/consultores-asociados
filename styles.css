@@ -378,7 +378,7 @@ h1 {
 @media screen and (max-width: 568px){
 
 .timeline-wrapper{
-    display: block;
+    display: none;
 }
 
 .box-bottom {
