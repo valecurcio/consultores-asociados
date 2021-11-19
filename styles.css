@@ -403,18 +403,20 @@ h1 {
 
   .loading_wrapper {
     width: 100%;
-    min-height: 320px;
-    max-height: 500px;
+    min-height: 380px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    margin-bottom: 50px;
   }
     
     .box-mobile-content {
+        width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 999;
+        padding-bottom: 25px;
     }
     .box-mobile-content > img {
         width: 100%;
