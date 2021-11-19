@@ -86,4 +86,25 @@ $form = document.querySelector('#form')
 
 }
 
-// SLIDER
+//Timeline Mobile
+$(window).on("load", function(){
+    var $loadingWrapper = $(".loading_wrapper"),
+    $loadingInnerContent = $(".loading-inner-content");
+    $loadingInnerContent.on("mousemove touchmove", function(e){
+      if(e.clientX > $loadingWrapper.width() / 2) {
+        TweenMax.to($loadingWrapper, 2, {
+          scrollTo: {
+            x: "+=175"
+          },
+          ease: Power2.easeOut
+        });
+      }else {
+        TweenMax.to($loadingWrapper, 2, {
+          scrollTo: {
+            x: "-=175"
+          },
+          ease: Power2.easeOut
+        })
+      }
+    })
+  })

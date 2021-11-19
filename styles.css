@@ -375,16 +375,68 @@ h1 {
     font-weight: 500;
 }
 
+@media screen and (min-width: 568px){
+    .timeline-mobile{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 568px){
 
-.timeline-wrapper{
-    display: none;
-}
+    .history{
+        padding-bottom: 0;
+    }
 
-.box-bottom {
+    .timeline-wrapper{
+        display: none;
+    }
+
+    .box-bottom {
+        width: 100%;
+    }
+
+    .timeline-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+  .loading_wrapper {
     width: 100%;
-}
-
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+    .loading-inner-content {
+        background: #fff;
+        height: 280px;
+        width: 1280px; /* items X image-size( 240px + space of margin ) */
+    }
+    .box-mobile {
+        position: relative;
+        width: 240px; /* image-size */
+        height: 240px;
+        margin: 0 0;
+        float: left;
+        overflow: hidden;
+    }
+    .box-mobile:first-child {
+        margin-left: 40px;
+    }
+    .box-mobile:last-child {
+        margin-right: 40px;
+    }
+    .box-mobile-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+    .box-mobile-content > img {
+        width: 100%;
+    }
+    
 }
 
 
@@ -857,18 +909,20 @@ h1 {
         font-size: 1rem;
         margin: 14px -2px 52px ;
         max-width: 100%;
-        
-        
     }
 
     #plans-section{
         display: list-item;
-       
     }
 
     .services-wrapper{
         display: flex;
         flex-direction: column !important;
+    }
+
+    .text-overlay {
+        font-size: 12px !important;
+        max-width: 220px !important;
     }
 }
 
@@ -1100,7 +1154,3 @@ hr {
     font-weight: lighter;
 
 }
-
-
-
-
