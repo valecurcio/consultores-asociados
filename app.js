@@ -87,24 +87,24 @@ $form = document.querySelector('#form')
 }
 
 //Timeline Mobile
-$(window).on("load", function(){
-    var $loadingWrapper = $(".loading_wrapper"),
-    $loadingInnerContent = $(".loading-inner-content");
-    $loadingInnerContent.on("mousemove touchmove", function(e){
-      if(e.clientX > $loadingWrapper.width() / 2) {
-        TweenMax.to($loadingWrapper, 2, {
-          scrollTo: {
-            x: "+=175"
-          },
-          ease: Power2.easeOut
-        });
-      }else {
-        TweenMax.to($loadingWrapper, 2, {
-          scrollTo: {
-            x: "-=175"
-          },
-          ease: Power2.easeOut
-        })
-      }
-    })
-  })
+
+window.addEventListener('load', function(){
+    var imgs = [];
+    imgs[0] = './img/timeline/1.jpg';
+    imgs[1] = './img/timeline/2.jpg';
+    imgs[2] = './img/timeline/3.jpg';
+    imgs[3] = './img/timeline/4.jpg';
+    imgs[4] = './img/timeline/5.jpg';
+
+    var indexImgs = 0;
+
+    function changeimg(){
+        document.slider.src = imgs[indexImgs];
+        if(indexImgs < 4){
+            indexImgs++;
+        } else {
+            indexImgs = 0;
+        }
+    }
+    setInterval(changeimg, 3500);
+})
